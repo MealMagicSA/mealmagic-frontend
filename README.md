@@ -1,4 +1,4 @@
-## Movie Platform (VanillaJS)
+## MealMagic Plataforma de Receitas (VanillaJS)
 
 #### Este é um projeto universitário para aprendizagem de frontend com html, css e javascript.
 
@@ -20,14 +20,14 @@ Antes de começar, certifique-se de ter o Node.js instalado. Caso contrário, vo
 1. Clone este repositório:
 
    ```shell
-   git clone https://github.com/Ember-Company/movie-platform-frontend.git
+   git clone https://github.com/MealMagicSA/mealmagic-frontend
 
    ```
 
 2. Navegue até o diretório do projeto:
 
    ```shell
-    cd movie-platform-frontend
+    cd mealmagic-frontend
    ```
 
 3. Instale dependências:
