@@ -19,7 +19,7 @@ Antes de começar, certifique-se de ter o Node.js instalado. Caso contrário, vo
 
 ### Integrantes
 Fernando Feques Sarandy
-Gustavo Teste
+Gustavo Kafica da Silva
 
 
 ### Começando
