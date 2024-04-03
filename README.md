@@ -15,6 +15,9 @@ Este é um projeto que contém as seguintes competências principais:
 
 Antes de começar, certifique-se de ter o Node.js instalado. Caso contrário, você pode baixá-lo e instalá-lo no [site oficial do Node.js](https://nodejs.org/en/download/).
 
+### Integrantes
+Fernando Feques Sarandy
+
 ### Começando
 
 1. Clone este repositório:
