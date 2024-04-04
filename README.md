@@ -20,6 +20,7 @@ Antes de começar, certifique-se de ter o Node.js instalado. Caso contrário, vo
 ### Integrantes
 Fernando Feques Sarandy
 Gustavo Kafica da Silva
+Mariana Gabrielle dos Santos Paula
 
 
 ### Começando
