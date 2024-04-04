@@ -21,6 +21,8 @@ Antes de começar, certifique-se de ter o Node.js instalado. Caso contrário, vo
 Fernando Feques Sarandy
 Gustavo Kafica da Silva
 Mariana Gabrielle dos Santos Paula
+Marlenne Roberta Rodrigues dos Santos
+
 
 
 ### Começando
