@@ -22,6 +22,7 @@ Antes de começar, certifique-se de ter o Node.js instalado. Caso contrário, vo
 <br>Gustavo Kafica da Silva</br>
 <br>Mariana Gabrielle dos Santos Paula</br>
 <br>Marlenne Roberta Rodrigues dos Santos</br>
+<br>Luis Felipe Sitta</br>
 
 ### Começando
 
