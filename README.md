@@ -19,11 +19,9 @@ Antes de começar, certifique-se de ter o Node.js instalado. Caso contrário, vo
 
 ### Integrantes
 <br>Fernando Feques Sarandy</br>
-Gustavo Kafica da Silva
-Mariana Gabrielle dos Santos Paula
-Marlenne Roberta Rodrigues dos Santos
-
-
+<br>Gustavo Kafica da Silva</br>
+<br>Mariana Gabrielle dos Santos Paula</br>
+<br>Marlenne Roberta Rodrigues dos Santos</br>
 
 ### Começando
 
