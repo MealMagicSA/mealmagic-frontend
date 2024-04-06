@@ -11,18 +11,18 @@ Este é um projeto que contém as seguintes competências principais:
 - Metodologias Ágeis e Scrum
 - Trabalho em equipe, programação em pares e resolução cumulativa de problemas
 
-
-
 ### Pré-requisitos
 
 Antes de começar, certifique-se de ter o Node.js instalado. Caso contrário, você pode baixá-lo e instalá-lo no [site oficial do Node.js](https://nodejs.org/en/download/).
 
 ### Integrantes
+
 Fernando Feques Sarandy<br/>
 Gustavo Kafica da Silva<br/>
 Mariana Gabrielle dos Santos Paula<br/>
 Marlenne Roberta Rodrigues dos Santos<br/>
 Luis Felipe Sitta<br/>
+Danniell Kruger <br/>
 
 ### Começando
 
