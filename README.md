@@ -15,6 +15,15 @@ Este é um projeto que contém as seguintes competências principais:
 
 Antes de começar, certifique-se de ter o Node.js instalado. Caso contrário, você pode baixá-lo e instalá-lo no [site oficial do Node.js](https://nodejs.org/en/download/).
 
+### Integrantes
+
+Fernando Feques Sarandy<br/>
+Gustavo Kafica da Silva<br/>
+Mariana Gabrielle dos Santos Paula<br/>
+Marlenne Roberta Rodrigues dos Santos<br/>
+Luis Felipe Sitta<br/>
+Danniell Kruger <br/>
+
 ### Começando
 
 1. Clone este repositório:
@@ -53,3 +62,4 @@ Antes de começar, certifique-se de ter o Node.js instalado. Caso contrário, vo
 ### License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
+d file for details.
