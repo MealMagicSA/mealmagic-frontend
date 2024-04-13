@@ -1,35 +1,38 @@
+/* Importar fontes do fonts.google.com */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;           
-  
-
+  box-sizing: border-box;
 }
 
 .body {
-  flex-wrap: wrap;
-  background-color: gray;
+  background-color: #757575;
 }
 
-.header, .nav, .main, .aside, .footer {
-  background-color: gray;
+.header,
+.nav,
+.main,
+.aside,
+.footer {
+  /* background-color: gray; */
   margin: 3px;
   display: flex;
-
 }
 
-.header {
-  flex: 1 1 100vw;
-  height: 100px;
-  
+header {
+  width: 100%;
+  height: min-content;
+  background: #bc3737;
 }
 
-.header #logo {
+header .header #logo {
   flex: 0 1 200px;
-  background: #BC3737;
+  background: #bc3737;
 }
 
-#openMenu, #closeMenu {
+#openMenu,
+#closeMenu {
   border: none;
   background: none;
   font-size: 30px;
@@ -42,7 +45,6 @@
   flex: 1 1 100vw;
   align-items: center;
   justify-content: flex-end;
-  
 }
 
 .nav a {
@@ -53,7 +55,6 @@
 .main {
   flex: 20 1 500px;
   height: calc(100vh - 224px);
-  
 }
 
 .main .section {
@@ -61,18 +62,15 @@
   flex-shrink: 1;
   flex-basis: 100%;
   background-color: gray;
-  
 }
 
 .aside {
   flex: 1 1 200vw;
-  
 }
 
 .footer {
   flex: 1 1 100vw;
   height: 100px;
-  
 }
 
 .a {
@@ -92,7 +90,8 @@
 }
 
 @media only screen and (max-width: 717px) {
-  #openMenu, #closeMenu {
+  #openMenu,
+  #closeMenu {
     display: block;
   }
 
@@ -101,7 +100,6 @@
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 1.0);
+    background: rgba(0, 0, 0, 1);
   }
 }
-
