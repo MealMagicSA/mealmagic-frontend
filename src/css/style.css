@@ -53,6 +53,9 @@ header{
 }
 
 .corpo{
+  position: relative;
+  top: 2;
+  left: 2;
   height: 500px;
   display: flex;
   background-color: grey;
@@ -60,4 +63,5 @@ header{
   align-items: center;
   padding-left: 100px;
   padding-right: 100px;
+  z-index: 1;
 }
