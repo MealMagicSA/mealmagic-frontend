@@ -13,9 +13,9 @@
 .header,
 .nav,
 .main,
-.aside,
+.aside1,
+.aside2,
 .footer {
-  /* background-color: gray; */
   margin: 3px;
   display: flex;
 }
@@ -27,8 +27,9 @@ header {
 }
 
 header .header #logo {
-  flex: 0 1 200px;
+  flex: 0 1 100px;
   background: #bc3737;
+  
 }
 
 #openMenu,
@@ -52,16 +53,37 @@ header .header #logo {
   font-size: 20pt;
 }
 
-.main {
-  flex: 20 1 500px;
-  height: calc(100vh - 224px);
+.parent {
+  display: flex;
+  height: 400px;
 }
 
-.main .section {
+.flex-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: baseline;
+  gap: 10px 30px;
+}
+
+.flex-item{
+  background: #bc3737;
+  padding: 5px;
+  width: 400px;
+  height: 100px;
+  margin-top: 10px;
+  line-height: bold;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 100%;
-  background-color: gray;
+  flex-basis: auto;
 }
 
 .aside {
