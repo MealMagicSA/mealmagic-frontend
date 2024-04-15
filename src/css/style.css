@@ -1,7 +1,3 @@
-body{
-  margin: 0;
-}
-
 header{
   display: flex;
   height: 200px;
@@ -40,7 +36,6 @@ header{
 
 .carrossel-receitas{
   display: flex;
-  height: 100px;
   background-color: #8d8d8d;  
 }
 
@@ -50,18 +45,86 @@ header{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.nomeReceita{
+  font-weight: bold;
 }
 
 .corpo{
   position: relative;
   top: 2;
   left: 2;
-  height: 500px;
   display: flex;
-  background-color: grey;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   padding-left: 100px;
   padding-right: 100px;
   z-index: 1;
+}
+
+.ingredientes{
+  display: block;
+  width: 80%;
+  min-width: 600px;
+  min-height: 53vh;
+  background-color: rgba(0,0,0,.2);
+  text-align: center;
+}
+
+.ingrediente{
+  position: relative;
+  display: inline-block;
+  width: 45%; 
+  height: 20px;
+  background-color: white;
+  margin: 4px;
+}
+
+.pin{
+  position: absolute;
+  /*background-color: pink;*/
+  width: 20px;
+  height: 20px;
+  left: 0px;
+}
+
+.nomeIngrediente{
+  position: absolute;
+  left: 20px;
+  right: 80px;
+  text-align: center;
+}
+
+.quantidade{
+  position: absolute;
+  background-color: rgba(0,0,0,.1);
+  width: 40px;
+  height: 20px;
+  right: 20px;
+  top: 0px;
+  text-align: center;
+}
+
+.botao{
+  cursor: pointer;
+}
+
+.botaoMenos{
+  position: absolute;
+  /*background-color: red;*/
+  width: 20px;
+  height: 20px;
+  right: 0px;
+  top: 0px;
+}
+
+.botaoMais{
+  position: absolute;
+  /*background-color: blue;*/
+  width: 20px;
+  height: 20px;
+  right: 60px;
+  top: 0px;
 }
