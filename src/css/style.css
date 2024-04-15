@@ -1,7 +1,12 @@
 header{
   display: flex;
   height: 200px;
-  background-color: brown;
+  /* background-color: #BC3737; */
+  width: 100%;
+  background-image: url("../resources/banner.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .logo{
