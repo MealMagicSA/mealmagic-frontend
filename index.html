@@ -1,157 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>Meal Magic</title>
 
     <script
       src="https://kit.fontawesome.com/f3387cf796.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
 
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css"/>
   </head>
   <body>
-    <header class="d-flex align-items-center">
-      <div class="container-fluid">
-        <!-- Banners  -->
-        <div class="row justify-content-between align-items-center">
-          <div class="col-2">
-            <div class="logo">
-              <h1>Meal Magic</h1>
-            </div>
-          </div>
-          <div class="col-10 px-0">
-            <div
-              class="banner w-100 h-100 d-flex flex-column align-items-center"
-            >
-              <img
-                src="./src/assets/folder0.png"
-                class="w-100 h-100 object-fit-contain"
-                alt="Banner"
-              />
-            </div>
-          </div>
-        </div>
-        <!-- Search -->
-        <div class="row">
-          <div class="col-5 col-lg-5">
-            <div class="quantity-filter"></div>
-          </div>
-          <div class="col-7">
-            <div class="recipe-search"></div>
-          </div>
-        </div>
-      </div>
+    <header>
     </header>
-    
-    
+    <div class="fundo">
+      <main>
+        <div class="container-fluid bg-light w-100 h-32">
+          <div class="row m-0">
+            <div class="col-5 col-lg-5">
+              <div class="quantity-filter">
+                <div class="d-flex">
+                  <button class="botao btn btn-secondary">-</button>
+                  <span style="font-size: 20px;" class="px-2">
+                    <i class="porcao fa-solid fa-bowl-food"></i>
+                  </span>
+                  <button class="botao btn btn-secondary">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-7">
+              <div class="botao recipe-search w-100">
+                <input type="search" class="w-100 h-10 pl-4" name="buscaReceita" id="buscaReceita" placeholder="Busca uma receita">
+                <button class="botao btn btn-secondary">Pesquisar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="flex-container">
+          <li class="flex-item">
+            <i class="curte fa-solid fa-share-nodes"></i>
+            <i class="curte fa-regular fa-heart"></i>
+            <i class="text">Panqueca Americana</i>
+            <img
+            src="./src/assets/panquecaA.png"
+            class="img w-100 h-100 object-fit-contain"
+            alt="Seção1"/>
+          </li>
+          <li class="flex-item">
+            <i class="curte fa-solid fa-share-nodes"></i>
+            <i class="curte fa-regular fa-heart"></i>
+            <i class="text">Bolo de Morango</i>
+            <img
+            src="./src/assets/BoloM.png"
+            class="img w-100 h-100 object-fit-contain"
+            alt="Seção2"/>
+          </li>
+          <li class="flex-item">
+            <i class="curte fa-solid fa-share-nodes"></i>
+            <i class="curte fa-regular fa-heart"></i>
+            <i class="text">Pizza Sabores</i>
+            <img
+            src="./src/assets/pizzaS.png"
+            class="img w-100 h-100 object-fit-contain"
+            alt="Seção3"/>
+          </li>
+          <li class="flex-item">
+            <i class="curte fa-solid fa-share-nodes"></i>
+            <i class="curte fa-regular fa-heart"></i>
+            <i class="text">Ovo com Salada</i>
+            <img
+            src="./src/assets/OvoS.png"
+            class="img w-100 h-100 object-fit-contain"
+            alt="Seção4"/>
+          </li>
+          <li class="flex-item">
+            <i class="curte fa-solid fa-share-nodes"></i>
+            <i class="curte fa-regular fa-heart"></i>
+            <i class="text">Misto Quente</i>
+            <img
+            src="./src/assets/MistoQ.png"
+            class="img w-100 h-100 object-fit-contain"
+            alt="Seção5"/>
+          </li>
+          <li class="flex-item">
+            <i class="curte fa-solid fa-share-nodes"></i>
+            <i class="curte fa-regular fa-heart"></i>
+            <i class="text">Pão com Fruta e Mel</i>
+            <img
+            src="./src/assets/paoFeM.png"
+            class="img w-100 h-100 object-fit-contain"
+            alt="Seção6"/>
+          </li>
+          <li class="flex-item">
+            <i class="curte fa-solid fa-share-nodes"></i>
+            <i class="curte fa-regular fa-heart"></i>
+            <i class="text">X-Egg</i>
+            <img
+            src="./src/assets/xE.png"
+            class="img w-100 h-100 object-fit-contain"
+            alt="Seção7"/>
+          </li>
+          <li class="flex-item">
+            <i class="curte fa-solid fa-share-nodes"></i>
+            <i class="curte fa-regular fa-heart"></i>
+            <i class="text">Almondega com Rúcula</i>
+            <img
+            src="./src/assets/AlmondegaR.png"
+            class="img w-100 h-100 object-fit-contain"
+            alt="Seção8"/>
+          </li>
+        </ul>
+      </main>
 
-    <main>
-      <ul class="flex-container">
-        <li class="flex-item">
-          <i class="curte fa-solid fa-share-nodes"></i>
-          <i class="curte fa-regular fa-heart"></i>
-          <i class="text">Panqueca Americana</i>
-          <img
-          src="./src/assets/panquecaA.png"
-          class="img w-100 h-100 object-fit-contain"
-          alt="Seção1"/>
-        </li>
-        <li class="flex-item">
-          <i class="curte fa-solid fa-share-nodes"></i>
-          <i class="curte fa-regular fa-heart"></i>
-          <i class="text">Bolo de Morango</i>
-          <img
-          src="./src/assets/BoloM.png"
-          class="img w-100 h-100 object-fit-contain"
-          alt="Seção2"/>
-        </li>
-        <li class="flex-item">
-          <i class="curte fa-solid fa-share-nodes"></i>
-          <i class="curte fa-regular fa-heart"></i>
-          <i class="text">Pizza Sabores</i>
-          <img
-          src="./src/assets/pizzaS.png"
-          class="img w-100 h-100 object-fit-contain"
-          alt="Seção3"/>
-        </li>
-        <li class="flex-item">
-          <i class="curte fa-solid fa-share-nodes"></i>
-          <i class="curte fa-regular fa-heart"></i>
-          <i class="text">Ovo com Salada</i>
-          <img
-          src="./src/assets/OvoS.png"
-          class="img w-100 h-100 object-fit-contain"
-          alt="Seção4"/>
-        </li>
-        <li class="flex-item">
-          <i class="curte fa-solid fa-share-nodes"></i>
-          <i class="curte fa-regular fa-heart"></i>
-          <i class="text">Misto Quente</i>
-          <img
-          src="./src/assets/MistoQ.png"
-          class="img w-100 h-100 object-fit-contain"
-          alt="Seção5"/>
-        </li>
-        <li class="flex-item">
-          <i class="curte fa-solid fa-share-nodes"></i>
-          <i class="curte fa-regular fa-heart"></i>
-          <i class="text">Pão com Fruta e Mel</i>
-          <img
-          src="./src/assets/paoFeM.png"
-          class="img w-100 h-100 object-fit-contain"
-          alt="Seção6"/>
-        </li>
-        <li class="flex-item">
-          <i class="curte fa-solid fa-share-nodes"></i>
-          <i class="curte fa-regular fa-heart"></i>
-          <i class="text">X-Egg</i>
-          <img
-          src="./src/assets/xE.png"
-          class="img w-100 h-100 object-fit-contain"
-          alt="Seção7"/>
-        </li>
-        <li class="flex-item">
-          <i class="curte fa-solid fa-share-nodes"></i>
-          <i class="curte fa-regular fa-heart"></i>
-          <i class="text">Almondega com Rúcula</i>
-          <img
-          src="./src/assets/AlmondegaR.png"
-          class="img w-100 h-100 object-fit-contain"
-          alt="Seção8"/>
-        </li>
-      </ul>
-    </main>
+      
 
-    
+      <aside>
+        <fieldset class="filtros">
+          <legend></legend>
+          <div>
+            <input type="checkbox" id="intlactose" name="intlactose" checked />
+            <label for="intlactose">Intolerancia a lactose</label>
+          </div>
+          <div>
+            <input type="checkbox" id="horns" name="intgluten" />
+            <label for="intgluten">Intolerancia a gluten</label>
+          </div>
+          <div>
+            <input type="checkbox" id="vegetariano" name="vegetariano" checked />
+            <label for="vegetariano">Vegetariano</label>
+          </div>
+          <div>
+            <input type="checkbox" id="vegano" name="vegano" />
+            <label for="vegano">Vegano</label>
+          </div>
+        </fieldset>
+        
+      </aside>
+    </div>
 
-    <aside>Relacionados menu
-      <li class="flex-porcao">
-        <i class="fa-solid fa-bowl-food"></i>
-      </li>
-
-    </aside>
-
-
-    <footer>Rodapé
-      <i class="fa-solid fa-cart-plus"></i>
+    <footer>
+      <i class="lista fa-regular fa-file-lines"></i>
+      <p class="p"></p>
 
     </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
