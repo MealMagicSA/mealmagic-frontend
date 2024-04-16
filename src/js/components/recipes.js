@@ -1,5 +1,5 @@
-import { RecipeSidebar } from "./sidebar.js";
 import { LocalStorage } from "../storage.js";
+import { RecipeSidebar } from "./sidebar.js";
 
 export class Recipes {
   constructor() {
@@ -13,9 +13,11 @@ export class Recipes {
   init = () => {
     this.setRecipes(LocalStorage.get("recipes"));
 
-    if (this.recipes.length > 0) {
+    if (this.hasRecipes()) {
       this.renderComponent(this.buildComponent());
-      this.recipesContainer.addEventListener("click", this.handleRecipeClick);
+      this.recipesContainer.addEventListener("click", (event) => {
+        this.handleRecipeClick(event);
+      });
     }
   };
 
@@ -23,25 +25,17 @@ export class Recipes {
     this.recipesContainer.innerHTML = html;
   };
 
-  handleRecipeClick = (event) => {
-    if (recipes) {
+  handleRecipeClick = ({ target }) => {
+    if (this.hasRecipes()) {
       this.recipes.forEach((recipe) => {
-        if (recipe.id === event.target.id) {
-          this.RecipeSidebar.setRecipe(recipe);
+        if (recipe.id === target.id) {
+          this.RecipeSidebar.setRecipe(recipe).init();
         }
       });
     }
   };
 
   buildComponent = () => {
-    // if (this.isLoading) {
-    //   return `
-    //     <div class="loading">
-    //       <div class="spinner">Loading...</div>
-    //     </div>
-    //   `;
-    // }
-
     return this.recipes
       .map(({ id, title, image }) => {
         const recipe = new Recipe(id, title, image);
@@ -56,6 +50,10 @@ export class Recipes {
   setRecipes = (recipes) => {
     this.recipes = recipes;
   };
+
+  hasRecipes = () => {
+    return this.recipes.length > 0;
+  };
 }
 
 class Recipe {
@@ -67,7 +65,7 @@ class Recipe {
 
   renderComponent = () => {
     return `
-      <li class="flex-item" id='${this.id}}'>
+      <li class="flex-item" id='${this.id}'>
         <i class="curte fa-solid fa-share-nodes"></i>
         <i class="curte fa-regular fa-heart"></i>
         <i class="text">${this.title}</i>
