@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Panqueca Americana",
+    "image": "../../assets/panquecaA.png"
+  },
+  {
+    "title": "Bolo de Morango",
+    "image": "../../assets/BoloM.png.png.png"
+  },
+  {
+    "title": "Pizza Sabores",
+    "image": "../../assets/pizzaS.png"
+  },
+  {
+    "title": "Ovo com Salada",
+    "image": "../../assets/OvoS.png"
+  },
+  {
+    "title": "Misto Quente",
+    "image": "../../assets/MistoQ.png"
+  },
+  {
+    "title": "Pão com Fruta e Mel",
+    "image": "../../assets/paoFeM.png"
+  },
+  {
+    "title": "X-Egg",
+    "image": "../../assets/xE.png"
+  },
+  {
+    "title": "Almondega com Rúcula",
+    "image": "../../assets/AlmondegaR.png"
+  }
+]
