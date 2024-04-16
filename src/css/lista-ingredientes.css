@@ -75,22 +75,33 @@ header{
   width: 80%;
   min-width: 600px;
   min-height: 53vh;
-  background-color: rgba(0,0,0,.2);
+  background-color: #FEF8AA;
   text-align: center;
+}
+
+
+.gridIngredientes{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 .ingrediente{
   position: relative;
-  display: inline-block;
-  width: 45%; 
+  display: grid;
   height: 20px;
-  background-color: white;
-  margin: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  border-left: 0.25px solid rgba(0, 0, 0, 0.8);
+  border-right: 0.25px solid rgba(0, 0, 0, 0.8);
+  padding: 22px;
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
 }
 
 .pin{
   position: absolute;
-  /*background-color: pink;*/
   width: 20px;
   height: 20px;
   left: 0px;
@@ -105,7 +116,6 @@ header{
 
 .quantidade{
   position: absolute;
-  background-color: rgba(0,0,0,.1);
   width: 40px;
   height: 20px;
   right: 20px;
@@ -123,7 +133,6 @@ header{
   width: 20px;
   height: 20px;
   right: 0px;
-  top: 0px;
 }
 
 .botaoMais{
@@ -132,5 +141,4 @@ header{
   width: 20px;
   height: 20px;
   right: 60px;
-  top: 0px;
 }
