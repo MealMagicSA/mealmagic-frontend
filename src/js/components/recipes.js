@@ -44,8 +44,6 @@ export class Recipes {
       .join("");
   };
 
-  fetchRecipes = () => {};
-
   setRecipes = (recipes) => {
     this.recipes = recipes;
   };

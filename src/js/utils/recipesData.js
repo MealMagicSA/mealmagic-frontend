@@ -1,7 +1,7 @@
 export const recipesList = [
   {
     title: "Panqueca Americana",
-    image: "/assets/PanquecaA.png",
+    image: "/images/PanquecaA.png",
     id: "1",
     ingredientes: {
       flour: 1,
@@ -35,7 +35,7 @@ export const recipesList = [
   },
   {
     title: "Bolo de Morango",
-    image: "/assets/BoloM.png",
+    image: "/images/BoloM.png",
     id: "2",
     ingredientes: {
       strawberry: 1,
@@ -70,7 +70,7 @@ export const recipesList = [
   },
   {
     title: "Pizza Sabores",
-    image: "/assets/pizzaS.png",
+    image: "/images/pizzaS.png",
     id: "3",
     ingredientes: {
       tomato: 1,
@@ -105,7 +105,7 @@ export const recipesList = [
   },
   {
     title: "Ovo com Salada",
-    image: "/assets/OvoS.png",
+    image: "/images/OvoS.png",
     id: "4",
     ingredientes: {
       egg: 1,
@@ -135,7 +135,7 @@ export const recipesList = [
   },
   {
     title: "Misto Quente",
-    image: "/assets/MistoQ.png",
+    image: "/images/MistoQ.png",
     id: "5",
     ingredientes: {
       cheese: 1,
@@ -164,7 +164,7 @@ export const recipesList = [
   },
   {
     title: "Pão com Fruta e Mel",
-    image: "/assets/paoFeM.png",
+    image: "/images/paoFeM.png",
     id: "6",
     ingredientes: {
       bread: 1,
@@ -192,7 +192,7 @@ export const recipesList = [
   },
   {
     title: "X-Egg",
-    image: "/assets/xE.png",
+    image: "/images/xE.png",
     id: "7",
     ingredientes: {
       bread: 1,
@@ -219,7 +219,7 @@ export const recipesList = [
   },
   {
     title: "Almondega com Rúcula",
-    image: "/assets/AlmondegaR.png",
+    image: "/images/AlmondegaR.png",
     id: "8",
     ingredientes: {
       meat: 1,

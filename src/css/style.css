@@ -22,7 +22,7 @@ header {
   /* display: flex; */
   height: 225px;
   width: 100%;
-  background-image: url("../../assets/Banner.jpeg");
+  background-image: url("/images/Banner.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
