@@ -1,0 +1,144 @@
+header{
+  display: flex;
+  height: 225px;
+  width: 100%;
+  background-image: url("../assets/banner.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logo{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 18pt;
+}
+
+#meal-magic{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#span-magic{
+  padding-left: 35px;
+}
+
+.banner
+{
+  flex: 2;
+}
+
+.receitas{
+  display: flex;
+  padding: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrossel-receitas{
+  display: flex;
+  background-color: #8d8d8d;  
+}
+
+.fundo-receitas{
+  display: flex;
+  column-gap: 40px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-items: baseline;
+  padding-top: 20px;
+}
+
+.nomeReceita{
+  font-weight: bold;
+}
+
+.corpo{
+  position: relative;
+  top: 2;
+  left: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-left: 100px;
+  padding-right: 100px;
+  z-index: 1;
+}
+
+.ingredientes{
+  display: block;
+  width: 80%;
+  min-width: 600px;
+  min-height: 53vh;
+  background-color: #FEF8AA;
+  text-align: center;
+}
+
+
+.gridIngredientes{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.ingrediente{
+  position: relative;
+  display: grid;
+  height: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  border-left: 0.25px solid rgba(0, 0, 0, 0.8);
+  border-right: 0.25px solid rgba(0, 0, 0, 0.8);
+  padding: 22px;
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+}
+
+.pin{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0px;
+}
+
+.nomeIngrediente{
+  position: absolute;
+  left: 20px;
+  right: 80px;
+  text-align: center;
+}
+
+.quantidade{
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  right: 20px;
+  top: 0px;
+  text-align: center;
+}
+
+.botao{
+  cursor: pointer;
+}
+
+.botaoMenos{
+  position: absolute;
+  /*background-color: red;*/
+  width: 20px;
+  height: 20px;
+  right: 0px;
+}
+
+.botaoMais{
+  position: absolute;
+  /*background-color: blue;*/
+  width: 20px;
+  height: 20px;
+  right: 60px;
+}
