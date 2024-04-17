@@ -1,7 +1,7 @@
 export const recipesList = [
   {
     title: "Panqueca Americana",
-    image: "/images/PanquecaA.png",
+    image: "/images/panquecaA.png",
     id: "1",
     ingredientes: {
       flour: 1,
