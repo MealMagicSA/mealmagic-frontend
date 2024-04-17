@@ -27,20 +27,23 @@ export class RecipeSidebar {
   header = (image) => {
     return `
       <div class="recipe-sidebar_header">
+        <button class="recipe-sidebar_close">
+          <i class="fas fa-times"></i>
+        </button>
         <img src='${image}' alt='Recipe Image' class='recipe-sidebar_head_img' /> 
       </div>
     `;
   };
 
   ingredients = (ingredientes) => {
-    const ingredientsList = Object.entries(ingredientes).map(
-      ([name, quantity]) => {
+    const ingredientsList = Object.entries(ingredientes)
+      .map(([name, quantity]) => {
         return `<li>${name}: ${quantity}</li>`;
-      }
-    );
+      })
+      .join("");
 
     return `
-        <h3>Ingredientes</h3>
+        <h5>Ingredientes</h5>
         <ul>
           ${ingredientsList} 
         </ul>
@@ -55,7 +58,7 @@ export class RecipeSidebar {
       .join("");
 
     return `
-      <h3>Modo de Preparo</h3>
+      <h5>Modo de Preparo</h5>
         <ol>
           ${stepsList} 
         </ol>
@@ -91,7 +94,7 @@ export class RecipeSidebar {
   };
 
   handleCloseBtn = () => {
-    const closeBtn = this.sideBarContent.previousElementSibling;
+    const closeBtn = this.sideBarContent.querySelector(".recipe-sidebar_close");
 
     closeBtn.addEventListener("click", () => {
       this.removeRecipe().hide();
@@ -102,13 +105,23 @@ export class RecipeSidebar {
     });
   };
 
+  lockScroll = () => {
+    document.body.style.overflow = "hidden";
+  };
+
+  unlockScroll = () => {
+    document.body.style.overflow = "auto";
+  };
+
   hide = () => {
     this.overlay.classList.remove("show");
     this.sideBarContent.parentElement.classList.remove("show");
+    this.unlockScroll();
   };
 
   show = () => {
     this.overlay.classList.add("show");
     this.sideBarContent.parentElement.classList.add("show");
+    this.lockScroll();
   };
 }
