@@ -292,3 +292,23 @@ ul {
   /* padding-left: em; */
   list-style: disc;
 }
+
+@media only screen and (max-width: 850px) {
+  .recipe-sidebar {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .recipe-sidebar {
+    width: 100%;
+  }
+
+  .recipe-sidebar .recipe-sidebar_close {
+    left: 10px;
+  }
+
+  .recipe-sidebar .content-wrapper .recipe-sidebar_content {
+    padding: 20px 10px;
+  }
+}
