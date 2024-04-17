@@ -15,9 +15,8 @@ export class Recipes {
 
     if (this.hasRecipes()) {
       this.renderComponent(this.buildComponent());
-      this.recipesContainer.addEventListener("click", (event) => {
-        this.handleRecipeClick(event);
-      });
+
+      this.recipesContainer.addEventListener("click", this.handleRecipeClick);
     }
   };
 

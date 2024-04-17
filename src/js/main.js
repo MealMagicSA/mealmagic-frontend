@@ -9,5 +9,5 @@ window.addEventListener("DOMContentLoaded", () => {
   //   LocalStorage.set("recipes", data)
   // );
 
-  new Recipes();
+  new Recipes(); // Load the recipe handler
 });

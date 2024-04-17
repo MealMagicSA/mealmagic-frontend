@@ -70,7 +70,7 @@ export const recipesList = [
   },
   {
     title: "Pizza Sabores",
-    image: "/src/assets/pizzaS.png",
+    image: "/assets/pizzaS.png",
     id: "3",
     ingredientes: {
       tomato: 1,
