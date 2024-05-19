@@ -59,6 +59,11 @@ Danniell Kruger <br/>
 - Usa JavaScript vanilla, tornando-o fácil de entender e personalizar.
 - Vem com uma estrutura de diretórios simples, facilitando a organização do seu código.
 
+- Local storage for cart - contador, item (object)
+- a function to navigate between pages
+- function to carregar dados from localstorage when the page starts
+- criar um icon de carinho com contador - exibir um dropdown do conteudo do carinho quando passar o mouse
+
 ### License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
