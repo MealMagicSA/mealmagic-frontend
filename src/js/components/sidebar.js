@@ -34,10 +34,14 @@ export class Sidebar {
   };
 
   handleAddToCart = () => {
-    document.getElementById("add-carrinho").addEventListener("click", (e) => {
-      this.cartManager.criar(this.recipe);
-      this.removeRecipe().buildComponent();
-    });
+    const addToCartBtn = document.getElementById("add-carrinho");
+
+    if (addToCartBtn) {
+      addToCartBtn.addEventListener("click", (e) => {
+        this.cartManager.criar(this.recipe);
+        this.removeRecipe().buildComponent();
+      });
+    }
   };
 
   handleCloseBtn = () => {
@@ -54,8 +58,8 @@ export class Sidebar {
 
   handleCartActions = () => {
     if (this.cartManager.hasItems()) {
-      console.log("has items");
       const deleteBtn = document.querySelectorAll(".excluir_item");
+      const quantityInputs = document.querySelectorAll(".details_quantity");
 
       deleteBtn.forEach((button) => {
         button.addEventListener("click", (e) => {
@@ -64,6 +68,16 @@ export class Sidebar {
 
           this.cartManager.delete(id);
           this.buildComponent();
+        });
+      });
+
+      quantityInputs.forEach((input) => {
+        input.addEventListener("change", (e) => {
+          const { id } =
+            e.target.parentElement.parentElement.parentElement.dataset;
+
+          console.log(e.target.value);
+          this.cartManager.updateQuantity(id, e.target.value);
         });
       });
     }
@@ -167,6 +181,8 @@ const recipeContent = ({ title, ingredientes, steps }) => {
 };
 
 const cartContent = (cartData) => {
+  console.log(cartData);
+
   const item = ({ id, title, image, quantidade }) => {
     return `
         <div class='cart-link' data-id='${id}'>
@@ -175,7 +191,7 @@ const cartContent = (cartData) => {
                 <span class='cart-item_title'>${title}</span>
 
                 <div class='details'>
-                  <input type='number' value='${quantidade}' id='details_quantity' min='1' />
+                  <input type='number' value='${quantidade}' class='details_quantity' min='1' />
                   <button class='excluir_item'>
                     <i class="fas fa-trash"></i>
                   </button>

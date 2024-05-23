@@ -367,7 +367,7 @@ ul {
   margin-left: auto;
 }
 
-.details #details_quantity {
+.details .details_quantity {
   width: 50px;
   border: none;
   outline: none;
