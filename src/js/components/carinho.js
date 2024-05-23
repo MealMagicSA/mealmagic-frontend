@@ -55,10 +55,6 @@ export class Carrinho {
     this.saveCart();
   };
 
-  aumentarQuantidadeIten = (id) => {};
-
-  diminuirQuantidadeIten = (id) => {};
-
   saveCart = () => {
     LocalStorage.set("carrinho", this.itens);
   };
