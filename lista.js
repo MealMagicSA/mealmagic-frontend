@@ -1,31 +1,48 @@
+let currentIndex = 0;
+
 document.addEventListener('DOMContentLoaded', function() {
     loadRecipes();
-
-    const plusButtons = document.querySelectorAll('.plus');
-    const minusButtons = document.querySelectorAll('.minus');
-
-    plusButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const quantityElement = this.nextElementSibling;
-            let quantity = parseInt(quantityElement.textContent);
-            quantity++;
-            quantityElement.textContent = quantity;
-            updateLocalStorage();
-        });
-    });
-
-    minusButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const quantityElement = this.previousElementSibling;
-            let quantity = parseInt(quantityElement.textContent);
-            if (quantity > 0) {
-                quantity--;
-                quantityElement.textContent = quantity;
-                updateLocalStorage();
-            }
-        });
-    });
+    addQuantityButtonListeners();
+    updateCarousel();
 });
+
+function prevItem() {
+    const items = document.querySelectorAll('.carousel-item');
+    const visibleItems = 5;
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = Math.ceil(items.length / visibleItems) - 1;
+    }
+    updateCarousel();
+}
+
+function nextItem() {
+    const items = document.querySelectorAll('.carousel-item');
+    const visibleItems = 5;
+    if (currentIndex < Math.ceil(items.length / visibleItems) - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    updateCarousel();
+}
+
+function updateCarousel() {
+    const items = document.querySelectorAll('.carousel-item');
+    const visibleItems = 5;
+    const totalItems = items.length;
+    const start = currentIndex * visibleItems;
+    const end = Math.min(start + visibleItems, totalItems);
+
+    items.forEach((item, index) => {
+        if (index >= start && index < end) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
 
 const recipes = [
     {
@@ -109,22 +126,20 @@ const recipes = [
         image: 'Img/b5b56b2ae93d3dc958cf0c21c9383b18_XL.jpg',
         name: 'Macarronada da bere',
         ingredients: [
+            { name: 'Ingrediente 1', quantity: 1 },
+            { name: 'Ingrediente 2', quantity: 1 },
             { name: 'Ingrediente 3', quantity: 1 },
-            { name: 'Ingrediente 24', quantity: 1 },
-            { name: 'Ingrediente 34', quantity: 1 },
-            { name: 'Ingrediente 44', quantity: 1 },
+            { name: 'Ingrediente 4', quantity: 1 },
             { name: 'Ingrediente 5', quantity: 1 }
         ]
     },
     // Adicione mais receitas conforme necessário
 ];
 
-// Salva as receitas no localStorage
 function saveRecipes() {
     localStorage.setItem('recipes', JSON.stringify(recipes));
 }
 
-// Carrega as receitas do localStorage e adiciona ao carrossel
 function loadRecipes() {
     const storedRecipes = localStorage.getItem('recipes');
     if (!storedRecipes) {
@@ -132,13 +147,13 @@ function loadRecipes() {
     }
     const carouselTrack = document.querySelector('.carousel-track');
     carouselTrack.innerHTML = '';
-    const displayedRecipes = recipes.slice(0, 5); // Seleciona apenas as primeiras 5 receitas
-    displayedRecipes.forEach((recipe, index) => {
+    recipes.forEach((recipe, index) => {
         const item = document.createElement('div');
         item.classList.add('carousel-item');
-        item.innerHTML = `<img src="${recipe.image}" alt="${recipe.name}" onclick="showIngredients(${index})">`;
+        item.innerHTML = `<img src="${recipe.image}" alt="${recipe.name}" onclick="showIngredients(${index})"><p>${recipe.name}</p>`;
         carouselTrack.appendChild(item);
     });
+    updateCarousel(); // Certifique-se de que o carrossel é atualizado após carregar os itens
 }
 
 function showIngredients(recipeIndex) {
@@ -146,10 +161,8 @@ function showIngredients(recipeIndex) {
     const listaCompras = document.getElementById('lista-compras');
     const conteudo = document.querySelector('.conteudo');
 
-    // Limpa conteúdo existente
     conteudo.innerHTML = '';
 
-    // Adiciona novos ingredientes
     recipe.ingredients.forEach(ingredient => {
         const ingredienteDiv = document.createElement('div');
         ingredienteDiv.classList.add('ingrediente');
@@ -182,9 +195,14 @@ function showIngredients(recipeIndex) {
         conteudo.appendChild(ingredienteDiv);
     });
 
-    // Adiciona event listeners aos novos botões
-    const plusButtons = conteudo.querySelectorAll('.plus');
-    const minusButtons = conteudo.querySelectorAll('.minus');
+    addQuantityButtonListeners();
+
+    listaCompras.style.display = 'block';
+}
+
+function addQuantityButtonListeners() {
+    const plusButtons = document.querySelectorAll('.plus');
+    const minusButtons = document.querySelectorAll('.minus');
 
     plusButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -192,7 +210,7 @@ function showIngredients(recipeIndex) {
             let quantity = parseInt(quantityElement.textContent);
             quantity++;
             quantityElement.textContent = quantity;
-            updateLocalStorage(recipeIndex, ingredient.name, quantity);
+            updateLocalStorage();
         });
     });
 
@@ -203,13 +221,10 @@ function showIngredients(recipeIndex) {
             if (quantity > 0) {
                 quantity--;
                 quantityElement.textContent = quantity;
-                updateLocalStorage(recipeIndex, ingredient.name, quantity);
+                updateLocalStorage();
             }
         });
     });
-
-    // Mostra a seção de lista de compras
-    listaCompras.style.display = 'block';
 }
 
 function updateLocalStorage(recipeIndex, ingredientName, newQuantity) {
