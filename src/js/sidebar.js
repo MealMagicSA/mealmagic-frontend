@@ -172,7 +172,7 @@ const recipeContent = ({ title, ingredientes, steps }) => {
           </div>
         </div>
         <div class='recipe-sidebar_footer'>
-          <button id='add-carrinho'>Adicionar no Carrinho +</button>
+          <button id='add-carrinho' class='btn btn-primary'>Adicionar no Carrinho +</button>
         </div>
       </div>
     `;
