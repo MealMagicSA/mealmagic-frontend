@@ -103,18 +103,10 @@ export class Sidebar {
     return this;
   };
 
-  lockScroll = () => {
-    document.body.style.overflow = "hidden";
-  };
-
-  unlockScroll = () => {
-    document.body.style.overflow = "auto";
-  };
-
   hide = () => {
     this.overlay.classList.remove("show");
     this.sideBarContent.parentElement.classList.remove("show");
-    this.unlockScroll();
+    document.body.style.overflow = "auto";
 
     return this;
   };
@@ -122,7 +114,7 @@ export class Sidebar {
   show = () => {
     this.overlay.classList.add("show");
     this.sideBarContent.parentElement.classList.add("show");
-    this.lockScroll();
+    document.body.style.overflow = "hidden";
 
     return this;
   };
