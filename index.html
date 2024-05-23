@@ -26,26 +26,30 @@
         <div class="container-fluid bg-light w-100 h-32">
           <div class="row m-0">
             <div class="col-5 col-lg-5">
-              <div class="quantity-filter">
-                <div class="d-flex">
+              <div class="row">
+                <div class="quantity-filter col-4">
                   <button class="botao btn btn-secondary">-</button>
                   <span style="font-size: 20px" class="px-2">
                     <i class="porcao fa-solid fa-bowl-food"></i>
                   </span>
                   <button class="botao btn btn-secondary">+</button>
                 </div>
+                <button class="btn btn-light col-2 position-relative cart">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span class="cart-counter text-bg-warning">0</span>
+                </button>
               </div>
             </div>
             <div class="col-7">
-              <div class="botao recipe-search w-100">
+              <div class="recipe-search w-100 row gap-4 py-2">
                 <input
                   type="search"
-                  class="w-100 h-10 pl-4"
+                  class="col-4 h-10 pl-4"
                   name="buscaReceita"
                   id="buscaReceita"
                   placeholder="Busca uma receita"
                 />
-                <button class="botao btn btn-secondary">Pesquisar</button>
+                <button class="btn btn-secondary col-2">Pesquisar</button>
               </div>
             </div>
           </div>
@@ -170,10 +174,9 @@
       </a>
     </footer>
 
-    <div class="sidebar-overlay">
-      <div class="recipe-sidebar">
-        <div class="content-wrapper"></div>
-      </div>
+    <div class="sidebar-overlay"></div>
+    <div class="recipe-sidebar">
+      <div class="content-wrapper"></div>
     </div>
 
     <script
