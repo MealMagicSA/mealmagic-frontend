@@ -1,13 +1,11 @@
+import { Carrinho } from "./components/carinho.js";
 import { Recipes } from "./components/recipes.js";
-import { JsonParser, LocalStorage } from "./storage.js";
+import { LocalStorage } from "./storage.js";
 import { recipesList } from "./utils/recipesData.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   LocalStorage.set("recipes", recipesList);
 
-  // JsonParser.get("/json/recipes.json").then((data) =>
-  //   LocalStorage.set("recipes", data)
-  // );
-
-  new Recipes(); // Load the recipe handler
+  new Recipes();
+  new Carrinho();
 });
