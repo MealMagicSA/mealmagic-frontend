@@ -1,12 +1,12 @@
 let currentIndex = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadRecipes();
+    loadReceita();
     addQuantityButtonListeners();
     updateCarousel();
 });
 
-function prevItem() {
+function proxItem() {
     const items = document.querySelectorAll('.carousel-item');
     const visibleItems = 5;
     if (currentIndex > 0) {
@@ -44,7 +44,7 @@ function updateCarousel() {
     });
 }
 
-const recipes = [
+const receita = [
     {
         image: 'Img/b5b56b2ae93d3dc958cf0c21c9383b18_XL.jpg',
         name: 'Macarronada da bere',
@@ -133,37 +133,37 @@ const recipes = [
             { name: 'Ingrediente 5', quantity: 1 }
         ]
     },
-    // Adicione mais receitas conforme necessário
+   
 ];
 
-function saveRecipes() {
-    localStorage.setItem('recipes', JSON.stringify(recipes));
+function saveReceita() {
+    localStorage.setItem('receita', JSON.stringify(receita));
 }
 
-function loadRecipes() {
-    const storedRecipes = localStorage.getItem('recipes');
-    if (!storedRecipes) {
-        saveRecipes();
+function loadReceita() {
+    const storedReceita = localStorage.getItem('receita');
+    if (!storedReceita) {
+        saveReceita();
     }
     const carouselTrack = document.querySelector('.carousel-track');
     carouselTrack.innerHTML = '';
-    recipes.forEach((recipe, index) => {
+    receita.forEach((receita, index) => {
         const item = document.createElement('div');
         item.classList.add('carousel-item');
-        item.innerHTML = `<img src="${recipe.image}" alt="${recipe.name}" onclick="showIngredients(${index})"><p>${recipe.name}</p>`;
+        item.innerHTML = `<img src="${receita.image}" alt="${receita.name}" onclick="showIngredients(${index})"><p>${receita.name}</p>`;
         carouselTrack.appendChild(item);
     });
-    updateCarousel(); // Certifique-se de que o carrossel é atualizado após carregar os itens
+    updateCarousel(); 
 }
 
-function showIngredients(recipeIndex) {
-    const recipe = recipes[recipeIndex];
+function showIngredients(receitaIndex) {
+    const receitas = receita[receitaIndex];
     const listaCompras = document.getElementById('lista-compras');
     const conteudo = document.querySelector('.conteudo');
 
     conteudo.innerHTML = '';
 
-    recipe.ingredients.forEach(ingredient => {
+    receitas.ingredients.forEach(ingredient => {
         const ingredienteDiv = document.createElement('div');
         ingredienteDiv.classList.add('ingrediente');
         
@@ -216,7 +216,7 @@ function addQuantityButtonListeners() {
 
     minusButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const quantityElement = this.previousElementSibling;
+            const quantityElement = this.shareiousElementSibling;
             let quantity = parseInt(quantityElement.textContent);
             if (quantity > 0) {
                 quantity--;
@@ -227,15 +227,15 @@ function addQuantityButtonListeners() {
     });
 }
 
-function updateLocalStorage(recipeIndex, ingredientName, newQuantity) {
-    const recipe = recipes[recipeIndex];
-    const ingredient = recipe.ingredients.find(ing => ing.name === ingredientName);
+function updateLocalStorage(receitaIndex, ingredientName, newQuantity) {
+    const receitas = receita[receitaIndex];
+    const ingredient = receitas.ingredients.find(ing => ing.name === ingredientName);
     if (ingredient) {
         ingredient.quantity = newQuantity;
-        localStorage.setItem('recipes', JSON.stringify(recipes));
+        localStorage.setItem('receita', JSON.stringify(receita));
     }
 }
-function shareOnWhatsApp() {
+function shareWhatsApp() {
     const conteudo = document.querySelector('.conteudo');
     const ingredientes = conteudo.querySelectorAll('.ingrediente');
     
