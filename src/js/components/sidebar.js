@@ -76,7 +76,6 @@ export class Sidebar {
           const { id } =
             e.target.parentElement.parentElement.parentElement.dataset;
 
-          console.log(e.target.value);
           this.cartManager.updateQuantity(id, e.target.value);
         });
       });
@@ -181,8 +180,6 @@ const recipeContent = ({ title, ingredientes, steps }) => {
 };
 
 const cartContent = (cartData) => {
-  console.log(cartData);
-
   const item = ({ id, title, image, quantidade }) => {
     return `
         <div class='cart-link' data-id='${id}'>
