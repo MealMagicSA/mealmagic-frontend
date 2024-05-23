@@ -1,5 +1,4 @@
-import { LocalStorage } from "../storage.js";
-import { Carrinho } from "./carinho.js";
+import { LocalStorage } from "./storage.js";
 import { Sidebar } from "./sidebar.js";
 
 export class Recipes {

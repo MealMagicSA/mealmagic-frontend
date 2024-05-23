@@ -349,6 +349,10 @@ ul {
   width: 100%;
 }
 
+.cart-link .cart-list_item a:hover {
+  color: crimson;
+}
+
 .cart-link .cart-list_item img {
   height: 100%;
   width: 100px;

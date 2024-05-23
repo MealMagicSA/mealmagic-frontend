@@ -1,5 +1,5 @@
-import { Carrinho } from "./components/carinho.js";
-import { Recipes } from "./components/recipes.js";
+import { Carrinho } from "./cart.js";
+import { Recipes } from "./recipes.js";
 import { LocalStorage } from "./storage.js";
 import { recipesList } from "./utils/recipesData.js";
 
