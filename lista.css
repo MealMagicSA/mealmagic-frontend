@@ -24,7 +24,11 @@
 
 
 .carousel-item {
-    min-width: 20%;
+    max-width: 300px; /* Defina o tamanho máximo desejado */
+    max-height: 300px; /* Defina o tamanho máximo desejado */
+    width: auto;
+    height: auto;
+    /* min-width: 20%; */
     box-sizing: border-box;
     padding: 10px;
     text-align: center;
