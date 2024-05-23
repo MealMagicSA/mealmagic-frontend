@@ -156,3 +156,18 @@
     font-size: 1.2em;
     padding: 5px 10px;
 }
+#share-whatsapp {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#share-whatsapp:hover {
+    background-color: #128C7E;
+}

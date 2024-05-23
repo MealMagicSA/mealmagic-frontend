@@ -235,3 +235,19 @@ function updateLocalStorage(recipeIndex, ingredientName, newQuantity) {
         localStorage.setItem('recipes', JSON.stringify(recipes));
     }
 }
+function shareOnWhatsApp() {
+    const conteudo = document.querySelector('.conteudo');
+    const ingredientes = conteudo.querySelectorAll('.ingrediente');
+    
+    let listaTexto = 'Lista de Compras:\n';
+    
+    ingredientes.forEach(ingrediente => {
+        const nome = ingrediente.querySelector('p').textContent;
+        const quantidade = ingrediente.querySelector('.quantity').textContent;
+        listaTexto += `${nome}: ${quantidade}\n`;
+    });
+    
+    const whatsappLink = `https://wa.me/?text=${encodeURIComponent(listaTexto)}`;
+    
+    window.open(whatsappLink, '_blank');
+}
