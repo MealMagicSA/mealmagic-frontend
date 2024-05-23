@@ -17,7 +17,6 @@ export class Carrinho {
     // verificar que nenhum dos itens tem o mesmo id / duplicado hehehehe
     if (!this.itens.some((item) => item.id === newItem.id)) {
       this.itens.push(newItem);
-      LocalStorage.set("carrinho", this.itens);
 
       this.saveCart();
       this.updateCounter();
