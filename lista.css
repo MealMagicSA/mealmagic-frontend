@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel {
+    overflow: hidden;
+    background-color: rgb(216, 214, 214);
+
+    
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+
+.carousel-item {
+    min-width: 20%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+
+.prox, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prox {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.add-receita {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.add-receita input {
+    padding: 10px;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.add-receita button {
+    padding: 10px 20px;
+    margin-left: 10px;
+}

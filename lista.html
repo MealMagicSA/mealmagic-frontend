@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" href="lista.css">
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+            <img src="lista/bannermeal.PNG" alt="banner" width="100%">
+        </div>
+    </header>
+    <nav>
+        <h1>Receitas</h1>
+        <div class="carousel-container">
+            <button class="prox" onclick="proxItem()">&#10094;</button>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <img src="Img/b5b56b2ae93d3dc958cf0c21c9383b18_XL.jpg" alt="Receita 1">
+                        <p>Macarronada da bere</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Img/b5b56b2ae93d3dc958cf0c21c9383b18_XL.jpg" alt="Receita 2">
+                        <p>Macarronada da bere</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Img/b5b56b2ae93d3dc958cf0c21c9383b18_XL.jpg" alt="Receita 3">
+                        <p>Macarronada da bere</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Img/b5b56b2ae93d3dc958cf0c21c9383b18_XL.jpg" alt="Receita 4">
+                        <p>Macarronada da bere</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Img/b5b56b2ae93d3dc958cf0c21c9383b18_XL.jpg" alt="Receita 5">
+                        <p>Macarronada da bere</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Img/b5b56b2ae93d3dc958cf0c21c9383b18_XL.jpg" alt="Receita 6">
+                        <p>Macarronada da bere</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Img/b5b56b2ae93d3dc958cf0c21c9383b18_XL.jpg" alt="Receita 7">
+                        <p>Macarronada da bere</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <button class="next" onclick="nextItem()">&#10095;</button>
+        </div>
+
+        <div class="add-receita">
+            <input type="text" id="nova-receita" placeholder="Nova Receita">
+            <button onclick="addReceita()">Adicionar Receita</button>
+        </div>
+    </nav>
+    <section id="lista-compras">
+        <h1 style="text-align: center;">Lista de Compras</h1>
+
+    </section>
+    <footer></footer>
+    <script src="lista.js"></script>
+</body>
+</html>
