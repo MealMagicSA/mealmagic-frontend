@@ -48,3 +48,28 @@ function addReceita() {
         updateCarousel();
     }
 }
+////////////////////////
+document.addEventListener('DOMContentLoaded', function() {
+    const maisButtons = document.querySelectorAll('.mais');
+    const menosButtons = document.querySelectorAll('.menos');
+
+    maisButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const quantityElement = this.nextElementSibling;
+            let quantity = parseInt(quantityElement.textContent);
+            quantity++;
+            quantityElement.textContent = quantity;
+        });
+    });
+
+    menosButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const quantityElement = this.previousElementSibling;
+            let quantity = parseInt(quantityElement.textContent);
+            if (quantity > 0) {
+                quantity--;
+                quantityElement.textContent = quantity;
+            }
+        });
+    });
+});

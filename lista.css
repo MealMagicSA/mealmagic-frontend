@@ -71,3 +71,53 @@
     padding: 10px 20px;
     margin-left: 10px;
 }
+
+#lista-compras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.lista {
+    position: relative;
+    width: 75%; /* Ajuste conforme necessário */
+    background: url('public/images/folha_caderno.webp') no-repeat center center;
+    background-size: cover;
+    padding: 50px;
+}
+
+.conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.ingrediente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(50% - 20px); /* Duas colunas com espaçamento */
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente para melhor legibilidade */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.ingrediente img {
+    width: 30px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.ingrediente p {
+    margin: 5px 0;
+}
+
+.ingrediente button {
+    margin: 5px;
+}
