@@ -12,10 +12,7 @@ export class Carrinho {
   };
 
   criar = (receitaObjeto) => {
-    console.log(receitaObjeto);
     const newItem = this.transform(receitaObjeto);
-
-    const test = [true, false, true, false];
 
     // verificar que nenhum dos itens tem o mesmo id / duplicado hehehehe
     if (!this.itens.some((item) => item.id === newItem.id)) {
@@ -47,8 +44,6 @@ export class Carrinho {
 
       return item;
     });
-
-    console.log(this.itens);
 
     this.saveCart();
   };
