@@ -1,4 +1,4 @@
-import { LocalStorage } from "../storage";
+import { LocalStorage } from "./storage";
 
 export class Carrinho {
   constructor() {
@@ -7,15 +7,16 @@ export class Carrinho {
     this.updateCounter();
   }
 
-  buscar = () => {
+  getAll = () => {
     return this.itens;
   };
 
-  criar = (receitaObjeto) => {
-    const newItem = this.transform(receitaObjeto);
+  add = (receita) => {
+    const newItem = this.transform(receita);
+    const hasDuplicate = this.itens.some((item) => item.id === newItem.id);
 
     // verificar que nenhum dos itens tem o mesmo id / duplicado hehehehe
-    if (!this.itens.some((item) => item.id === newItem.id)) {
+    if (!hasDuplicate) {
       this.itens.push(newItem);
 
       this.saveCart();

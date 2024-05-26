@@ -1,4 +1,4 @@
-import { Carrinho } from "./carinho";
+import { Carrinho } from "./cart";
 
 export class Sidebar {
   constructor() {
@@ -6,7 +6,7 @@ export class Sidebar {
     this.sideBarContent = document.querySelector(".content-wrapper");
     this.overlay = document.querySelector(".sidebar-overlay");
 
-    this.cartManager = new Carrinho();
+    this.cart = new Carrinho();
   }
 
   render = () => {
@@ -22,8 +22,8 @@ export class Sidebar {
       `;
     } else {
       this.sideBarContent.innerHTML = `
-        ${this.header("/images/pao-com-ovo.webp")}
-        ${cartContent(this.cartManager.buscar())}
+        ${this.header()}
+        ${cartContent(this.cart.getAll())}
       `;
     }
 
@@ -38,7 +38,7 @@ export class Sidebar {
 
     if (addToCartBtn) {
       addToCartBtn.addEventListener("click", (e) => {
-        this.cartManager.criar(this.recipe);
+        this.cart.add(this.recipe);
         this.removeRecipe().buildComponent();
       });
     }
@@ -57,7 +57,7 @@ export class Sidebar {
   };
 
   handleCartActions = () => {
-    if (this.cartManager.hasItems()) {
+    if (this.cart.hasItems()) {
       const deleteBtn = document.querySelectorAll(".excluir_item");
       const quantityInputs = document.querySelectorAll(".details_quantity");
 
@@ -66,7 +66,7 @@ export class Sidebar {
           const { id } =
             e.target.parentElement.parentElement.parentElement.dataset;
 
-          this.cartManager.delete(id);
+          this.cart.delete(id);
           this.buildComponent();
         });
       });
@@ -76,7 +76,7 @@ export class Sidebar {
           const { id } =
             e.target.parentElement.parentElement.parentElement.dataset;
 
-          this.cartManager.updateQuantity(id, e.target.value);
+          this.cart.updateQuantity(id, e.target.value);
         });
       });
     }
@@ -84,11 +84,18 @@ export class Sidebar {
 
   header = (image) => {
     return `
-      <div class="recipe-sidebar_header">
+      <div class="recipe-sidebar_header" style='height: ${
+        image ? "250px" : "60px"
+      }'>
         <button class="recipe-sidebar_close">
           <i class="fas fa-times"></i>
         </button>
-        <img src='${image}' alt='Recipe Image' class='recipe-sidebar_head_img' /> 
+        ${
+          image
+            ? `<img src='${image}' alt='Recipe Image' class='recipe-sidebar_head_img' />`
+            : ""
+        }
+         
       </div>
     `;
   };
@@ -165,7 +172,7 @@ const recipeContent = ({ title, ingredientes, steps }) => {
           </div>
         </div>
         <div class='recipe-sidebar_footer'>
-          <button id='add-carrinho'>Adicionar no Carrinho +</button>
+          <button id='add-carrinho' class='btn btn-primary'>Adicionar no Carrinho +</button>
         </div>
       </div>
     `;
@@ -176,8 +183,8 @@ const cartContent = (cartData) => {
     return `
         <div class='cart-link' data-id='${id}'>
               <li class='cart-list_item'>
-                <img src='${image}' alt='${title}' />
-                <span class='cart-item_title'>${title}</span>
+                <a href='/lista/index.html'><img src='${image}' alt='${title}' />
+                <span class='cart-item_title'>${title}</span></a> 
 
                 <div class='details'>
                   <input type='number' value='${quantidade}' class='details_quantity' min='1' />
