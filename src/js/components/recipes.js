@@ -5,8 +5,11 @@ import { Sidebar } from "./sidebar.js";
 export class Recipes {
   constructor() {
     this.recipes = LocalStorage.get("recipes");
+    this.filteredRecipes = this.recipes;
     this.recipesContainer = document.getElementById("RecipesContainer");
     this.sidebar = new Sidebar();
+    this.searchInput = document.getElementById("buscaReceita");
+    this.searchButton = document.querySelector(".btn-secondary");
     this.init();
   }
 
@@ -16,6 +19,7 @@ export class Recipes {
 
       this.recipesContainer.addEventListener("click", this.handleRecipeClick);
       this.handleShowCart();
+      this.handleSearch();
     }
   };
 
@@ -38,7 +42,7 @@ export class Recipes {
   };
 
   buildComponent = () => {
-    return this.recipes
+    return this.filteredRecipes
       .map(({ id, title, image }) => {
         const recipe = new Recipe(id, title, image);
 
@@ -49,12 +53,33 @@ export class Recipes {
 
   setRecipes = (recipes) => {
     this.recipes = recipes;
+    this.filteredRecipes = recipes; 
   };
 
   hasRecipes = () => {
     return this.recipes.length > 0;
   };
 }
+handleSearch = () => {
+  this.searchButton.addEventListener("click", () => {
+    const searchTerm = this.searchInput.value.toLowerCase();
+    this.filteredRecipes = this.recipes.filter((recipe) =>
+      recipe.title.toLowerCase().includes(searchTerm)
+    );
+    this.render(this.buildComponent());
+  });
+
+  this.searchInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      const searchTerm = this.searchInput.value.toLowerCase();
+      this.filteredRecipes = this.recipes.filter((recipe) =>
+        recipe.title.toLowerCase().includes(searchTerm)
+      );
+      this.render(this.buildComponent());
+    }
+  });
+};
+
 
 class Recipe {
   constructor(id, title, image) {
@@ -78,3 +103,4 @@ class Recipe {
     `;
   };
 }
+const recipesInstance = new Recipes();
