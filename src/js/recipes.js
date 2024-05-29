@@ -61,9 +61,11 @@ export class Recipes {
   handleSearch = () => {
     const searchInput = document.getElementById("buscaReceita");
     const searchButton = document.querySelector(".btn-secondary");
+    
+    console.log(searchInput)
 
     const filterItems = () => {
-      const searchTerm = this.searchInput.value.toLowerCase();
+      const searchTerm = searchInput.value.toLowerCase();
       this.filteredRecipes = this.recipes.filter((recipe) =>
         recipe.title.toLowerCase().includes(searchTerm)
       );
@@ -85,8 +87,6 @@ class Recipe {
   render = () => {
     return `
       <li class="flex-item" id='${this.id}'>
-        <i class="curte fa-solid fa-share-nodes"></i>
-        <i class="curte fa-regular fa-heart"></i>
         <i class="text">${this.title}</i>
         <img
           src="${this.image}"

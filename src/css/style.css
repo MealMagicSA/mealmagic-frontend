@@ -130,10 +130,9 @@ header .header #logo {
 
 aside {
   margin-left: 30px;
-  margin-right: 30px;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
-  flex: 1;
   list-style: none;
   cursor: pointer;
   align-content: center;
@@ -148,6 +147,7 @@ aside {
   text-align: center;
   background-color: #d9d9d9;
   min-width: 310px;
+  max-width: 310px;
   min-height: 400px;
   align-items: flex-start;
   padding-left: 60px;
@@ -165,6 +165,11 @@ footer {
 .a {
   text-decoration: none;
   color: inherit;
+}
+
+main{
+  width: 70%;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 923px) {
