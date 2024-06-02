@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel {
+    overflow: hidden;
+    background-color: rgb(216, 214, 214);
+
+    
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+.carousel-item {
+    max-width: 300px; 
+    max-height: 300px; 
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+
+.prox, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prox {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.add-receita {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.add-receita input {
+    padding: 10px;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.add-receita button {
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+#nova-receita {
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#lista-compras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.lista {
+    position: relative;
+    width: 65%; 
+    background: url('public/images/folha_caderno.webp') no-repeat center center;
+    background-size: cover;
+    padding: 50px;
+    margin-top: 2%;
+    margin-left: 18%;
+}
+
+.conteudo {
+    width: 80%;
+    max-width: 1200px;
+    height: 500px;
+    padding: 20px;
+    margin: 0 auto;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+}
+
+.ingrediente {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.ingrediente img {
+    width: 24px;
+    height: 24px;
+}
+
+.ingrediente p {
+    margin: 0 10px;
+}
+
+.ingrediente button {
+    margin: 5px;
+}
+
+
+.plus, .minus {
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px 10px;
+}
+#share-whatsapp {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#share-whatsapp:hover {
+    background-color: #128C7E;
+}
