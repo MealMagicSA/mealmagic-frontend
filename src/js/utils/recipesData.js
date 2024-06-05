@@ -3,21 +3,36 @@ export const recipesList = [
     title: "Panqueca Americana",
     image: "/images/panquecaA.png",
     id: "1",
-    ingredientes: {
-      flour: 1,
-      egg: 1,
-      milk: 1,
-      sugar: 1,
-      butter: 1,
-    },
+    ingredients: [
+      {
+        name: "flour",
+        quantity: 1,
+      },
+      {
+        name: "egg",
+        quantity: 1,
+      },
+      {
+        name: "milk",
+        quantity: 1,
+      },
+      {
+        name: "sugar",
+        quantity: 1,
+      },
+      {
+        name: "butter",
+        quantity: 1,
+      },
+    ],
     steps: [
       {
         step: 1,
-        description: "Misture todos os ingredientes secos em uma tigela.",
+        description: "Misture todos os ingredients secos em uma tigela.",
       },
       {
         step: 2,
-        description: "Adicione os ingredientes líquidos e misture bem.",
+        description: "Adicione os ingredients líquidos e misture bem.",
       },
       {
         step: 3,
@@ -37,14 +52,14 @@ export const recipesList = [
     title: "Bolo de Morango",
     image: "/images/BoloM.png",
     id: "2",
-    ingredientes: {
-      strawberry: 1,
-      sugar: 1,
-      flour: 1,
-      egg: 1,
-      milk: 1,
-      butter: 1,
-    },
+    ingredients: [
+      { name: "strawberry", quantity: 1 },
+      { name: "sugar", quantity: 1 },
+      { name: "flour", quantity: 1 },
+      { name: "egg", quantity: 1 },
+      { name: "milk", quantity: 1 },
+      { name: "butter", quantity: 1 },
+    ],
     steps: [
       {
         step: 1,
@@ -72,14 +87,14 @@ export const recipesList = [
     title: "Pizza Sabores",
     image: "/images/pizzaS.png",
     id: "3",
-    ingredientes: {
-      tomato: 1,
-      cheese: 1,
-      flour: 1,
-      egg: 1,
-      milk: 1,
-      butter: 1,
-    },
+    ingredients: [
+      { name: "tomato", quantity: 1 },
+      { name: "cheese", quantity: 1 },
+      { name: "flour", quantity: 1 },
+      { name: "egg", quantity: 1 },
+      { name: "milk", quantity: 1 },
+      { name: "butter", quantity: 1 },
+    ],
     steps: [
       {
         step: 1,
@@ -91,7 +106,7 @@ export const recipesList = [
       },
       {
         step: 3,
-        description: "Adicione o queijo e os ingredientes que preferir.",
+        description: "Adicione o queijo e os ingredients que preferir.",
       },
       {
         step: 4,
@@ -107,13 +122,13 @@ export const recipesList = [
     title: "Ovo com Salada",
     image: "/images/OvoS.png",
     id: "4",
-    ingredientes: {
-      egg: 1,
-      lettuce: 1,
-      tomato: 1,
-      cheese: 1,
-      olive: 1,
-    },
+    ingredients: [
+      { name: "egg", quantity: 1 },
+      { name: "lettuce", quantity: 1 },
+      { name: "tomato", quantity: 1 },
+      { name: "cheese", quantity: 1 },
+      { name: "olive", quantity: 1 },
+    ],
     steps: [
       {
         step: 1,
@@ -125,7 +140,7 @@ export const recipesList = [
       },
       {
         step: 3,
-        description: "Misture todos os ingredientes e tempere a gosto.",
+        description: "Misture todos os ingredients e tempere a gosto.",
       },
       {
         step: 4,
@@ -137,12 +152,12 @@ export const recipesList = [
     title: "Misto Quente",
     image: "/images/MistoQ.png",
     id: "5",
-    ingredientes: {
-      cheese: 1,
-      ham: 1,
-      bread: 1,
-      butter: 1,
-    },
+    ingredients: [
+      { name: "cheese", quantity: 1 },
+      { name: "ham", quantity: 1 },
+      { name: "bread", quantity: 1 },
+      { name: "butter", quantity: 1 },
+    ],
     steps: [
       {
         step: 1,
@@ -166,11 +181,11 @@ export const recipesList = [
     title: "Pão com Fruta e Mel",
     image: "/images/paoFeM.png",
     id: "6",
-    ingredientes: {
-      bread: 1,
-      fruit: 1,
-      honey: 1,
-    },
+    ingredients: [
+      { name: "bread", quantity: 1 },
+      { name: "fruit", quantity: 1 },
+      { name: "honey", quantity: 1 },
+    ],
     steps: [
       {
         step: 1,
@@ -194,14 +209,14 @@ export const recipesList = [
     title: "X-Egg",
     image: "/images/xE.png",
     id: "7",
-    ingredientes: {
-      bread: 1,
-      egg: 1,
-      cheese: 1,
-      ham: 1,
-      tomato: 1,
-      lettuce: 1,
-    },
+    ingredients: [
+      { name: "bread", quantity: 1 },
+      { name: "egg", quantity: 1 },
+      { name: "cheese", quantity: 1 },
+      { name: "ham", quantity: 1 },
+      { name: "tomato", quantity: 1 },
+      { name: "lettuce", quantity: 1 },
+    ],
     steps: [
       {
         step: 1,
@@ -209,7 +224,7 @@ export const recipesList = [
       },
       {
         step: 2,
-        description: "Monte o sanduíche com os ingredientes.",
+        description: "Monte o sanduíche com os ingredients.",
       },
       {
         step: 3,
@@ -221,13 +236,13 @@ export const recipesList = [
     title: "Almondega com Rúcula",
     image: "/images/AlmondegaR.png",
     id: "8",
-    ingredientes: {
-      meat: 1,
-      tomato: 1,
-      onion: 1,
-      garlic: 1,
-      rucula: 1,
-    },
+    ingredients: [
+      { name: "meat", quantity: 1 },
+      { name: "tomato", quantity: 1 },
+      { name: "onion", quantity: 1 },
+      { name: "garlic", quantity: 1 },
+      { name: "rucula", quantity: 1 },
+    ],
     steps: [
       {
         step: 1,
